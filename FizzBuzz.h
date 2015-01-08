@@ -10,4 +10,6 @@
 
 @interface FizzBuzz : NSObject
 
++(NSString*) printFizzBuzz:(int)iteration;
+
 @end

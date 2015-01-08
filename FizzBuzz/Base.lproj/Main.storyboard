@@ -1,25 +1,112 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6162" systemVersion="14A238h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.11" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6160"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6190.4"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Try your luck with Fizz, Buzz" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UtL-Bx-rgJ">
+                                <rect key="frame" x="230" y="121" width="140" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fizz or Bizz!! what you say" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Bk-sN-R1H">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="219" id="laq-mS-knY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="laq-mS-knY"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="laq-mS-knY"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter any number to get Fizz or Buzz" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dnf-lT-57k">
+                                <rect key="frame" x="205" y="209" width="191" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="264" id="Yol-Aa-5Vu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Yol-Aa-5Vu"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="Yol-Aa-5Vu"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="qDZ-51-3rs"/>
+                                </connections>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UtL-Bx-rgJ" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="57" id="YK0-6h-5qj"/>
+                            <constraint firstItem="dnf-lT-57k" firstAttribute="top" secondItem="UtL-Bx-rgJ" secondAttribute="bottom" constant="88" id="b0F-Nz-QjZ"/>
+                            <constraint firstAttribute="centerX" secondItem="7Bk-sN-R1H" secondAttribute="centerX" id="ewO-4h-IPc"/>
+                            <constraint firstAttribute="centerX" secondItem="UtL-Bx-rgJ" secondAttribute="centerX" id="mKy-ur-WUB"/>
+                            <constraint firstItem="7Bk-sN-R1H" firstAttribute="top" secondItem="dnf-lT-57k" secondAttribute="bottom" constant="100" id="tNv-gs-bgw"/>
+                            <constraint firstAttribute="centerX" secondItem="dnf-lT-57k" secondAttribute="centerX" id="u53-EQ-TRY"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="7Bk-sN-R1H"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="YK0-6h-5qj"/>
+                                <exclude reference="mKy-ur-WUB"/>
+                                <exclude reference="b0F-Nz-QjZ"/>
+                                <exclude reference="u53-EQ-TRY"/>
+                                <exclude reference="ewO-4h-IPc"/>
+                                <exclude reference="tNv-gs-bgw"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="7Bk-sN-R1H"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="YK0-6h-5qj"/>
+                                <include reference="mKy-ur-WUB"/>
+                                <include reference="b0F-Nz-QjZ"/>
+                                <include reference="u53-EQ-TRY"/>
+                                <include reference="ewO-4h-IPc"/>
+                                <include reference="tNv-gs-bgw"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="buzzLabel" destination="7Bk-sN-R1H" id="85a-Bz-PbZ"/>
+                        <outlet property="iterationTextField" destination="dnf-lT-57k" id="gP8-3r-ahM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="440" y="273.75"/>
         </scene>
     </scenes>
 </document>

@@ -13,6 +13,7 @@
 		3DDA2BDC19D45DA000117D62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DDA2BDA19D45DA000117D62 /* Main.storyboard */; };
 		3DDA2BDE19D45DA000117D62 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DDA2BDD19D45DA000117D62 /* Images.xcassets */; };
 		3DDA2BEA19D45DA000117D62 /* FizzBuzzTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDA2BE919D45DA000117D62 /* FizzBuzzTests.m */; };
+		3DDA2BF519D4618100117D62 /* FizzBuzz.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDA2BF419D4618100117D62 /* FizzBuzz.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,8 @@
 		3DDA2BE319D45DA000117D62 /* FizzBuzzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FizzBuzzTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DDA2BE819D45DA000117D62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DDA2BE919D45DA000117D62 /* FizzBuzzTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FizzBuzzTests.m; sourceTree = "<group>"; };
+		3DDA2BF319D4618100117D62 /* FizzBuzz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FizzBuzz.h; sourceTree = "<group>"; };
+		3DDA2BF419D4618100117D62 /* FizzBuzz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FizzBuzz.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,8 @@
 		3DDA2BC419D45DA000117D62 = {
 			isa = PBXGroup;
 			children = (
+				3DDA2BF319D4618100117D62 /* FizzBuzz.h */,
+				3DDA2BF419D4618100117D62 /* FizzBuzz.m */,
 				3DDA2BCF19D45DA000117D62 /* FizzBuzz */,
 				3DDA2BE619D45DA000117D62 /* FizzBuzzTests */,
 				3DDA2BCE19D45DA000117D62 /* Products */,
@@ -218,6 +223,7 @@
 				3DDA2BD919D45DA000117D62 /* ViewController.m in Sources */,
 				3DDA2BD619D45DA000117D62 /* AppDelegate.m in Sources */,
 				3DDA2BD319D45DA000117D62 /* main.m in Sources */,
+				3DDA2BF519D4618100117D62 /* FizzBuzz.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

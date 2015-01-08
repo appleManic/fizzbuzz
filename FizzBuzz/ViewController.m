@@ -7,21 +7,52 @@
 //
 
 #import "ViewController.h"
+#import "FizzBuzz.h"
+
+#define iteration ((int) 100)
 
 @interface ViewController ()
 
+@property (strong, nonatomic) IBOutlet UITextField *iterationTextField;
+@property (strong, nonatomic) IBOutlet UILabel *buzzLabel;
+
 @end
 
-@implementation ViewController
+@implementation ViewController 
             
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    // get the iterations for  fizz and buzz
+    NSArray *getFizzBuzzArray = [self getTheFizzBuzz];
+   // NSLog(@"Print: %@", getFizzBuzzArray);
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (NSArray *)getTheFizzBuzz {
+
+    NSMutableArray *array= [[NSMutableArray alloc] init];
+    
+    for (int i =1; i<=iteration; i++) {
+        [array addObject:[FizzBuzz printFizzBuzz:i]];
+    }
+    return array;
+
+}
+
+#pragma mark - UITextField delegate
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+
+    // label value
+    _buzzLabel.text =[FizzBuzz printFizzBuzz:[textField.text intValue]];
+    [textField resignFirstResponder];
+    
+    return YES;
 }
 
 @end
